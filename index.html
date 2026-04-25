@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Los Barberos — Barbería en Edif. La Recoleta, Catalina Aldaz, Quito</title>
+  <meta name="description" content="Cortes clásicos, fades modernos, afeitado a navaja. Lunes a sábado en Edif. La Recoleta, Catalina Aldaz, Quito. Reserva por WhatsApp.">
+  <meta property="og:title" content="Los Barberos — Catalina Aldaz, Quito">
+  <meta property="og:description" content="Cortes que duran. Conversaciones también. 4.5 estrellas, 117 reseñas en Google.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEHNwf1EV2Vf52S8HKga4TLrcBv7WOm__2j9rbEjeoNhjbwgaMX1O4d76OOfImBHEmNYv-dcX5SfmhMl1XoXol1yLtaCeJ3Orbr7M5zPx_lyM3jcE1sdp2tQ-1MR7BNsMtrkyHXyszWddGapSLdGunoJsYAoSa--XzoEpL8VG3NQ1fnIW18C1qV6GfbenjIOBFVgR4N-PviQgXyptcBH6o6W-EXVjzx1NCDBc1jhpjftjBfN08yi-TRiPHo4RlJAagj0jt8w9lbndDOkmHwm0BYrRCxOFWm6-NT5fh789JGsFAbtB6RDfg2I-M8YHASytCXrUdb-4Qnvppob3peA-QQLmmZ2XLvpAz5yAxFifxwnAiSQbtgorQ3cVgyklD80B27Ry0Fts91PSELu8Xbj-ORrFAFBPnskmK5J85RnCkQZqRCS/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c19a65'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-weight='700' font-size='16' fill='%231a1108'%3ELB%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..900;1,9..144,200..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0c0c;
+      --surface: #161513;
+      --ink: #f3ebd9;
+      --ink-dim: #a89f8e;
+      --ink-faint: #6b6357;
+      --accent: #c19a65;
+      --accent-bright: #d8b07d;
+      --line: rgba(243, 235, 217, 0.08);
+    }
+    html, body { background: var(--bg); color: var(--ink); }
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .font-display { font-family: 'Fraunces', 'Times New Roman', serif; font-variation-settings: "opsz" 144, "SOFT" 100; letter-spacing: -0.02em; }
+    .photo { filter: contrast(1.04) saturate(0.88) brightness(0.96); }
+    .eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; color: var(--accent); }
+    [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .9s cubic-bezier(.2,.7,.3,1), transform .9s cubic-bezier(.2,.7,.3,1); will-change: opacity, transform; }
+    [data-reveal].revealed { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      [data-reveal] { opacity: 1; transform: none; transition: none; }
+      .hero-img { animation: none !important; }
+    }
+    @keyframes hero-slow-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+    .hero-img { animation: hero-slow-zoom 14s ease-out forwards; }
+    .btn-primary { background: var(--accent); color: #1a1108; transition: transform .25s ease, background .25s ease; }
+    .btn-primary:hover { background: var(--accent-bright); transform: translateY(-2px); }
+    .btn-ghost { color: var(--ink); border: 1px solid var(--line); transition: border-color .25s ease, color .25s ease; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .divider { height: 1px; background: var(--line); }
+    .num-badge { font-family: 'Fraunces', serif; font-style: italic; font-weight: 200; font-size: clamp(80px, 12vw, 160px); line-height: 1; color: var(--accent); opacity: 0.55; letter-spacing: -0.04em; }
+    /* Mobile-only nav body lock */
+    body.menu-open { overflow: hidden; }
+    /* Asymmetric image card hover */
+    .img-card { transition: transform .6s cubic-bezier(.2,.7,.3,1); }
+    .img-card:hover { transform: scale(1.02) translateY(-4px); }
+    /* Underline link variant */
+    .ulink { position: relative; padding-bottom: 2px; }
+    .ulink::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: currentColor; transform: scaleX(.2); transform-origin: left; transition: transform .35s ease; }
+    .ulink:hover::after { transform: scaleX(1); }
+  </style>
+</head>
+<body>
+
+  <!-- ─────────── NAV ─────────── -->
+  <nav class="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-[color:var(--bg)]/70 border-b border-[color:var(--line)]">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full bg-[color:var(--accent)] grid place-items-center font-display font-bold text-[#1a1108] text-base shadow-lg shadow-black/40">LB</div>
+        <span class="font-display font-medium tracking-tight text-[color:var(--ink)] text-base hidden sm:block">Los Barberos</span>
+      </a>
+      <div class="hidden md:flex items-center gap-9 text-[13px] font-medium text-[color:var(--ink-dim)] tracking-wide">
+        <a href="#cortes" class="hover:text-[color:var(--ink)] transition">Cortes</a>
+        <a href="#proceso" class="hover:text-[color:var(--ink)] transition">Proceso</a>
+        <a href="#galeria" class="hover:text-[color:var(--ink)] transition">Galería</a>
+        <a href="#contacto" class="hover:text-[color:var(--ink)] transition">Contacto</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/593980610420?text=Hola%2C%20quiero%20agendar%20un%20corte%20en%20Los%20Barberos." class="btn-primary px-4 md:px-5 py-2.5 rounded-full text-[13px] font-semibold flex items-center gap-2">
+          <svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.8.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.5-.3z"/></svg>
+          <span class="hidden sm:inline">Reservar</span>
+        </a>
+        <button data-mobile-nav-toggle aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Abrir menú" class="md:hidden w-10 h-10 grid place-items-center rounded-full border border-[color:var(--line)] text-[color:var(--ink)]">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile overlay -->
+  <div id="mobile-nav-panel" data-mobile-nav-scope role="dialog" aria-modal="true" aria-hidden="true" class="fixed inset-0 z-50 bg-[color:var(--bg)]/97 backdrop-blur-2xl hidden">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <span class="font-display font-medium tracking-tight text-[color:var(--ink)] text-base">Los Barberos</span>
+      <button data-mobile-nav-close aria-label="Cerrar menú" class="w-10 h-10 grid place-items-center rounded-full border border-[color:var(--line)] text-[color:var(--ink)]">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M6 18L18 6"/></svg>
+      </button>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 pt-8 pb-12 flex flex-col gap-6 text-[color:var(--ink)]">
+      <a href="#cortes" data-mobile-nav-link class="font-display font-light text-4xl">Cortes</a>
+      <a href="#proceso" data-mobile-nav-link class="font-display font-light text-4xl">Proceso</a>
+      <a href="#galeria" data-mobile-nav-link class="font-display font-light text-4xl">Galería</a>
+      <a href="#contacto" data-mobile-nav-link class="font-display font-light text-4xl">Contacto</a>
+      <a href="https://wa.me/593980610420?text=Hola%2C%20quiero%20agendar%20un%20corte%20en%20Los%20Barberos." class="btn-primary mt-6 px-6 py-4 rounded-full text-base font-semibold flex items-center justify-center gap-2 self-start">Reservar por WhatsApp</a>
+      <div class="mt-6 pt-6 border-t border-[color:var(--line)] text-sm text-[color:var(--ink-dim)] space-y-1">
+        <div>Edificio Recoleta, planta Baja, Calle, Catalina Aldaz, 170135 Quito, Ecuador</div>
+        <div>+593 98 061 0420</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────── HERO ─────────── -->
+  <header id="top" class="relative h-[100svh] min-h-[640px] overflow-hidden">
+    <img src="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEHNwf1EV2Vf52S8HKga4TLrcBv7WOm__2j9rbEjeoNhjbwgaMX1O4d76OOfImBHEmNYv-dcX5SfmhMl1XoXol1yLtaCeJ3Orbr7M5zPx_lyM3jcE1sdp2tQ-1MR7BNsMtrkyHXyszWddGapSLdGunoJsYAoSa--XzoEpL8VG3NQ1fnIW18C1qV6GfbenjIOBFVgR4N-PviQgXyptcBH6o6W-EXVjzx1NCDBc1jhpjftjBfN08yi-TRiPHo4RlJAagj0jt8w9lbndDOkmHwm0BYrRCxOFWm6-NT5fh789JGsFAbtB6RDfg2I-M8YHASytCXrUdb-4Qnvppob3peA-QQLmmZ2XLvpAz5yAxFifxwnAiSQbtgorQ3cVgyklD80B27Ry0Fts91PSELu8Xbj-ORrFAFBPnskmK5J85RnCkQZqRCS/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI" alt="Los Barberos — vista general del salón" class="hero-img absolute inset-0 w-full h-full object-cover photo">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/30 to-black/90"></div>
+    <div class="relative h-full max-w-7xl mx-auto px-6 md:px-8 flex flex-col">
+      <div class="h-16 md:h-20 flex-shrink-0"></div>
+      <div class="flex-1 flex flex-col justify-end pb-16 md:pb-28">
+        <div class="eyebrow mb-6" data-reveal>Edif. La Recoleta · Catalina Aldaz · Quito</div>
+        <h1 class="font-display font-light text-[color:var(--ink)] text-[clamp(44px,9vw,168px)] leading-[0.92] tracking-[-0.025em] max-w-6xl" data-reveal>
+          Cortes que duran.<br>
+          <em class="italic font-light text-[color:var(--accent)]" style="font-variation-settings:'opsz' 144, 'SOFT' 100;">Conversaciones</em><span class="text-[color:var(--ink)]"> también.</span>
+        </h1>
+        <div class="mt-12 md:mt-16 flex flex-wrap items-center gap-x-10 md:gap-x-14 gap-y-4 text-[color:var(--ink-dim)] text-sm" data-reveal>
+          <div class="flex items-center gap-2.5">
+            <span class="text-[color:var(--accent)] text-base">★</span>
+            <span class="font-semibold text-[color:var(--ink)] tabular-nums">4.5</span>
+            <span>· 117 reseñas en Google</span>
+          </div>
+          <div class="hidden md:block w-px h-4 bg-[color:var(--line)]"></div>
+          <div>Lun–Sáb · 9:00–20:00</div>
+          <div class="hidden md:block w-px h-4 bg-[color:var(--line)]"></div>
+          <a href="tel:+593 98 061 0420" class="ulink hover:text-[color:var(--ink)] transition">+593 98 061 0420</a>
+        </div>
+      </div>
+      <!-- scroll cue -->
+      <div class="absolute bottom-8 right-6 md:right-8 hidden md:flex items-center gap-3 text-[color:var(--ink-faint)] text-[11px] tracking-widest uppercase">
+        <span>Scroll</span>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 5v14m0 0l-5-5m5 5l5-5"/></svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─────────── CORTES (Services) ─────────── -->
+  <section id="cortes" class="py-32 md:py-44 max-w-7xl mx-auto px-6 md:px-8">
+    <div class="grid md:grid-cols-12 gap-x-12 gap-y-16">
+      <div class="md:col-span-5 md:sticky md:top-28 self-start" data-reveal>
+        <div class="eyebrow mb-5">El menú</div>
+        <h2 class="font-display font-light text-[clamp(34px,5vw,76px)] leading-[1.02] tracking-tight">
+          Lo que sabemos<br>hacer bien.
+        </h2>
+        <p class="mt-8 text-[color:var(--ink-dim)] text-base md:text-lg leading-relaxed max-w-md">
+          Trabajo manual, herramientas que se afilan a mano, y el tiempo que cada cabeza necesita. Nada de cinco minutos al paso.
+        </p>
+      </div>
+      <div class="md:col-span-7 grid sm:grid-cols-2 gap-x-8 gap-y-14">
+        <div data-reveal>
+          <div class="num-badge">01</div>
+          <h3 class="font-display font-medium text-2xl md:text-3xl mt-4 leading-tight">Corte clásico</h3>
+          <div class="eyebrow text-[color:var(--ink-faint)] mt-2">25 min</div>
+          <p class="mt-3 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">Tijera y máquina, asesoría sobre forma y caída. Lavado, secado y peinado incluido.</p>
+        </div>
+        <div data-reveal>
+          <div class="num-badge">02</div>
+          <h3 class="font-display font-medium text-2xl md:text-3xl mt-4 leading-tight">Fade moderno</h3>
+          <div class="eyebrow text-[color:var(--ink-faint)] mt-2">35 min</div>
+          <p class="mt-3 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">Bajo, mid o skin. Detalles a navaja en patillas y nuca para que dure dos semanas más.</p>
+        </div>
+        <div data-reveal>
+          <div class="num-badge">03</div>
+          <h3 class="font-display font-medium text-2xl md:text-3xl mt-4 leading-tight">Barba y diseño</h3>
+          <div class="eyebrow text-[color:var(--ink-faint)] mt-2">20 min</div>
+          <p class="mt-3 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">Perfilado a navaja con toalla caliente, aceites y bálsamo. Sale dibujada como tú la pides.</p>
+        </div>
+        <div data-reveal>
+          <div class="num-badge">04</div>
+          <h3 class="font-display font-medium text-2xl md:text-3xl mt-4 leading-tight">Afeitado a navaja</h3>
+          <div class="eyebrow text-[color:var(--ink-faint)] mt-2">45 min</div>
+          <p class="mt-3 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">El servicio completo: vapor, doble pasada, after-shave clásico. 30 minutos de pausa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── POR QUÉ NOSOTROS — 4-up differentiators ─────────── -->
+  <section class="border-t border-[color:var(--line)] py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+        <div data-reveal>
+          <svg class="w-8 h-8 text-[color:var(--accent)] mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2L13.5 6.5L18 8L13.5 9.5L12 14L10.5 9.5L6 8L10.5 6.5L12 2zM5 16l1 2.5L8.5 19.5L6 20.5L5 23L4 20.5L1.5 19.5L4 18.5L5 16zm14 0l1 2.5L22.5 19.5L20 20.5L19 23L18 20.5L15.5 19.5L18 18.5L19 16z"/></svg>
+          <h4 class="font-display font-medium text-lg leading-tight">Tijeras<br>afiladas a mano</h4>
+          <p class="mt-2 text-[13px] text-[color:var(--ink-dim)] leading-relaxed">Cada quince días. Corte limpio, sin tirones.</p>
+        </div>
+        <div data-reveal>
+          <svg class="w-8 h-8 text-[color:var(--accent)] mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
+          <h4 class="font-display font-medium text-lg leading-tight">Una cabeza<br>a la vez</h4>
+          <p class="mt-2 text-[13px] text-[color:var(--ink-dim)] leading-relaxed">No te apuran. El próximo cliente espera.</p>
+        </div>
+        <div data-reveal>
+          <svg class="w-8 h-8 text-[color:var(--accent)] mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          <h4 class="font-display font-medium text-lg leading-tight">Reservas por<br>WhatsApp</h4>
+          <p class="mt-2 text-[13px] text-[color:var(--ink-dim)] leading-relaxed">Sin apps, sin formularios. Mensaje y listo.</p>
+        </div>
+        <div data-reveal>
+          <svg class="w-8 h-8 text-[color:var(--accent)] mb-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-4.5-7-11a4 4 0 017-2.6 4 4 0 017 2.6c0 6.5-7 11-7 11z"/></svg>
+          <h4 class="font-display font-medium text-lg leading-tight">Café para los<br>que esperan</h4>
+          <p class="mt-2 text-[13px] text-[color:var(--ink-dim)] leading-relaxed">Hervido en el momento. La regla del barrio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── EDITORIAL PHOTO BREAK 1 ─────────── -->
+  <section class="relative h-[60vh] md:h-[85vh] overflow-hidden">
+    <img src="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEGKDngBzmptiJkHg2l-blsc1U1XbgIHIpFzELVWUuOA7Q67hJKB6xHJ3Tx1W6TBLvwvmQVOGuoWm83LnuhZv692Aw8hB6tYSUUHK1G7f3YmfXj5I2sHmIqUcgNSmAZ8TkHUew4VZqf3j08I9sOIZLTgmQj-nM8V4fNBb7YECGTH4QSmPeLHKvy2p8OEGA_J6q3OX8CxSjIr8aXjy7nDHtpB0TI4wxw8lJY7ddvUS9z-xrBn6l0dmaYkGs7-d5JIGs3RPXMEAuMmtbE99awfLsbG04cTqprzdULK5s7QwxxvL5Z6LuHSyommTfeiFsj1S7NZBuKKMPE3kRim3EwQcsaAgrCeYx0Y8xyNCVF95l6F77M5kWAMOkaOPXoCJGadRP2HhSsHxoPiMqUbb6yv6RsWW0upqWtOIMeaVj7Yy9SmzA/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI" alt="Detalle del salón — sillón y herramientas" class="absolute inset-0 w-full h-full object-cover photo">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/20"></div>
+    <div class="absolute inset-x-0 bottom-12 md:bottom-20 max-w-7xl mx-auto px-6 md:px-8" data-reveal>
+      <div class="eyebrow mb-3 text-[color:var(--ink)]">— Desde 2018</div>
+      <p class="font-display font-light text-[color:var(--ink)] text-2xl md:text-4xl leading-[1.15] max-w-3xl">
+        En el mismo edificio. Con los mismos barberos.<br>
+        <span class="text-[color:var(--ink-dim)]">Y el mismo café para los que esperan.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────── PROCESO (Process) ─────────── -->
+  <section id="proceso" class="bg-[color:var(--surface)] py-32 md:py-44 border-y border-[color:var(--line)]">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="max-w-3xl mb-20 md:mb-28" data-reveal>
+        <div class="eyebrow mb-5">El proceso</div>
+        <h2 class="font-display font-light text-[clamp(34px,5vw,76px)] leading-[1.02] tracking-tight">
+          De la silla<br>al espejo.
+        </h2>
+      </div>
+      <ol class="grid md:grid-cols-3 gap-12 md:gap-16">
+        <li data-reveal>
+          <div class="num-badge">i.</div>
+          <h3 class="font-display font-medium text-2xl mt-4">Llegas</h3>
+          <p class="mt-4 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">Avisa por WhatsApp con dos horas de anticipación; si caes sin reserva, te decimos cuánto falta. Café o agua mientras esperas.</p>
+        </li>
+        <li data-reveal>
+          <div class="num-badge">ii.</div>
+          <h3 class="font-display font-medium text-2xl mt-4">Conversamos</h3>
+          <p class="mt-4 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">Cinco minutos antes de tocar la cabeza: qué buscas, qué estás dejando crecer, qué no quieres que repitamos del corte anterior.</p>
+        </li>
+        <li data-reveal>
+          <div class="num-badge">iii.</div>
+          <h3 class="font-display font-medium text-2xl mt-4">Salimos</h3>
+          <p class="mt-4 text-[color:var(--ink-dim)] text-[15px] leading-relaxed">Lavado, secado, recomendación de mantenimiento. Te decimos en cuánto vuelves — sin presión, sin paquetes inflados.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ─────────── GALERIA — asymmetric grid ─────────── -->
+  <section id="galeria" class="py-32 md:py-44 max-w-7xl mx-auto px-6 md:px-8">
+    <div class="flex items-end justify-between mb-16 md:mb-20" data-reveal>
+      <div>
+        <div class="eyebrow mb-5">El sillón</div>
+        <h2 class="font-display font-light text-[clamp(34px,5vw,76px)] leading-[1.02] tracking-tight">
+          Galería.
+        </h2>
+      </div>
+      <div class="hidden md:block max-w-sm text-[color:var(--ink-dim)] text-sm leading-relaxed pb-3">
+        Fotos reales del salón y del trabajo, no de bancos de imágenes.
+      </div>
+    </div>
+    <div class="grid grid-cols-12 gap-4 md:gap-6">
+      <div class="col-span-12 md:col-span-7 aspect-[4/3] overflow-hidden rounded-lg" data-reveal>
+        <img src="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEFEUWZOsT9LEVMhXzMnFtjkUVdOW71QfpJHiY1Nk9BKnqNSPaSyKuV_EdE2iuq_CqlOCc7tp9YdObgo8cJfsElEL3GkNS5csW9XLI3q9omtuM_9lXCm7q1FJ8sDpyZSkp1MhmoY2TIE1R-Ravv2nLHlF6oyba2w8sWNm9T1GSGKowU4rcRM2L60YiizC6ALPnUYZnxJXt6HGl1o9GAu95peOva8HcTfVTS5pdskQKXI-N2C-5lJ92cDy9UM6762jRxYazqbKJ6zBQOgjzPBogU5ZFBz5QbgheXM6xRP6GXcNeAWDAZ7YAW7_E9mQZ00Rkr9q_6fR54156LM8ValIzwyxTKiBAynEPsXqjR0SBNqXIUtKlc4iWorPwv0lTPhnoEcl204FM3dOEIR5o08QJNsSczKbx1ybXu0eqC_OgxcIPY/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI" alt="Los Barberos — interior, vista del espacio" loading="lazy" class="img-card w-full h-full object-cover photo">
+      </div>
+      <div class="col-span-6 md:col-span-5 aspect-[4/5] overflow-hidden rounded-lg" data-reveal>
+        <img src="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEHLKxD5ipjl_FQ2E4Bg2Va_7IJ0qvbQ2orY0E_xx50zv-FDevaSrPInFJ1ZoJjs-lGuCpss82eVS3CgvnMqUwBmXwM1wwTK7zQf0hOOsyri1-pfUZeBlyPLFcteE--vdSQdYn9cGa1OAfvQiR9x7jDmzyR3xaV56p_1Ky_OkZYuubiwBnnxHI-HOxWjAUyU4A_XuIj5aAeDaZX_R6egoCmT-w_oOOxwYS_cbV6BRiCmQtVtcGtXkmtbYNdPBnwyhvusA0TXrYDY1iMx1Zgu1WAm1_Pl--0DxYqEIntsJVsFU0lS4BD-OySs2kqz7Wg76rM8MbJVoGJgnBu40EknA_b6mh5o5joAGtQCPc7aXMMYA7g100IEv7Zru6zx_OHTEbZ6GupcE9YpW977sBLHNUvlqd3mNOi-R7wIj84VVpswDw/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI" alt="Los Barberos — detalle del trabajo" loading="lazy" class="img-card w-full h-full object-cover photo">
+      </div>
+      <div class="col-span-6 md:col-span-5 aspect-[4/5] overflow-hidden rounded-lg" data-reveal>
+        <img src="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEGfuXEyTFPQr7uHCSbhq8xZi--35w9pba9GxdGfWcB-CSPARHvnieGhHeLBdFsZj5prGvtVtEmx3GRwkWBh-fWHlxs76umo-eMJZv0RQtFqkYFrHfVU_RLi-8KNJpmXB7YvjYR5GRsgA3ocm8dsOWWSqZWGaGAj6pH7EFLZTqm2FCHjCHKOA-A_jC7LMFPOV4U9-xdMHZ8SmKLR7c5OvR7K4AHOO73rM7-2g0iJ2FRA8PeHt_Kk_hLh6FQ3BxaoymhHF-g8nXa_uK1J4UbFYEIPJNy932EKWPUcu86zsJeTHT5N4ryFTrtJvqnu2m4ARIMwgI73L4FpdqHSfXXDSPGavXB1h5NQS2ocmo_Niriiu6IEJah0AHAWqCL3i4ShTG6M4TtZWEJC-dONhff13CYgNSZt_hgG_EbWTgv3c8U/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI" alt="Los Barberos — herramientas y detalle" loading="lazy" class="img-card w-full h-full object-cover photo">
+      </div>
+      <div class="col-span-12 md:col-span-7 aspect-[4/3] overflow-hidden rounded-lg" data-reveal>
+        <img src="https://places.googleapis.com/v1/places/ChIJ30es2H-a1ZERdOa1sR21lbo/photos/AU_ZVEEA04RYlaKNJPOh5egg5PIhiT5FeA20I7PN9Svg9igssRvywGooftwUT6GqEmm96FVgMYTE5KxDMwRubEbIViZ1ZsgkgIaLgnuw4rfpi8FZ7wI2XTJZHyI6eZ41XBOC3QcVM_1hMf82LdtntN7Kny-DavGXWZB_UkrqS_QDFp6DEfx-2WWg2n6p_Dl05C9ov-aP3U9ZUfHk07WlELZcZTR75t4OmGOMvc_hXEZcFJtPQFZ73h26U0LjfKXlWVmHwVRyFydYLYsCk5XvhioP2NrWBUwLnO23cRCMXR6VWAyOPhaeJ7oMnPRuT4RQ-bsQPP_M8gw2jDJSk-jrfQGr2wo40pGc9fyDYu59XAeToq_n_rynvaAwC9Rjif8AAVroimV-kujHlK9HZ2WBm6ReM35Mvi_W-NIsQz-1spyiwUfYp5A/media?maxWidthPx=2400&maxHeightPx=1600&key=AIzaSyBzWxvBK1wCvxm41Zi0P8NyHUvEUVxXXMI" alt="Los Barberos — ambiente del salón" loading="lazy" class="img-card w-full h-full object-cover photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── CONTACTO — split horarios + dirección ─────────── -->
+  <section id="contacto" class="bg-[color:var(--surface)] py-32 md:py-44 border-y border-[color:var(--line)]">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 grid md:grid-cols-2 gap-x-16 gap-y-20">
+      <div data-reveal>
+        <div class="eyebrow mb-5">Cuándo</div>
+        <h3 class="font-display font-light text-[clamp(28px,4vw,56px)] leading-[1.04] tracking-tight">Horarios</h3>
+        <ul class="mt-10 md:mt-12 space-y-3 text-base md:text-lg text-[color:var(--ink-dim)]">
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Monday</span>
+            <span class="tabular-nums">10:00 AM – 8:00 PM</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Tuesday</span>
+            <span class="tabular-nums">10:00 AM – 8:00 PM</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Wednesday</span>
+            <span class="tabular-nums">10:00 AM – 8:00 PM</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Thursday</span>
+            <span class="tabular-nums">10:00 AM – 8:00 PM</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Friday</span>
+            <span class="tabular-nums">10:00 AM – 8:00 PM</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Saturday</span>
+            <span class="tabular-nums">9:00 AM – 6:00 PM</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-6 border-b border-[color:var(--line)] pb-3">
+            <span class="text-[color:var(--ink)] font-medium">Sunday</span>
+            <span class="tabular-nums">Closed</span>
+          </li>
+        </ul>
+      </div>
+      <div data-reveal>
+        <div class="eyebrow mb-5">Dónde</div>
+        <h3 class="font-display font-light text-[clamp(28px,4vw,56px)] leading-[1.04] tracking-tight">La Recoleta</h3>
+        <div class="mt-10 md:mt-12 space-y-6 text-[color:var(--ink-dim)] text-base md:text-lg leading-relaxed">
+          <p>Edificio Recoleta, planta Baja, Calle, Catalina Aldaz, 170135 Quito, Ecuador</p>
+          <div>
+            <div class="text-[color:var(--ink)] font-medium mb-1">Teléfono</div>
+            <a href="tel:+593 98 061 0420" class="ulink hover:text-[color:var(--ink)] transition">+593 98 061 0420</a>
+          </div>
+          <div>
+            <div class="text-[color:var(--ink)] font-medium mb-1">WhatsApp</div>
+            <a href="https://wa.me/593980610420?text=Hola%2C%20quiero%20agendar%20un%20corte%20en%20Los%20Barberos." class="ulink hover:text-[color:var(--ink)] transition">+593 98 061 0420</a>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?cid=13444851401724651124&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 mt-10 px-5 py-3 rounded-full text-sm">
+          Cómo llegar
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M7 17L17 7m0 0H8m9 0v9"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── FAQ ─────────── -->
+  <section class="py-32 md:py-40 max-w-5xl mx-auto px-6 md:px-8">
+    <div class="mb-14 md:mb-16" data-reveal>
+      <div class="eyebrow mb-5">Antes de venir</div>
+      <h2 class="font-display font-light text-[clamp(34px,5vw,72px)] leading-[1.02] tracking-tight">Lo que la gente<br>siempre pregunta.</h2>
+    </div>
+    <div class="divide-y divide-[color:var(--line)] border-y border-[color:var(--line)]">
+      <details class="group py-7 md:py-8" data-reveal>
+        <summary class="cursor-pointer flex items-center justify-between gap-6 list-none">
+          <span class="font-display font-medium text-xl md:text-2xl text-[color:var(--ink)] leading-snug">¿Hace falta reservar o pueden caer sin aviso?</span>
+          <svg class="w-5 h-5 text-[color:var(--accent)] flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-4 text-[color:var(--ink-dim)] leading-relaxed max-w-3xl">Las dos formas funcionan. Si reservás por WhatsApp con dos horas de anticipación, te garantizamos hora. Si caés sin aviso, te decimos cuánto falta — normalmente entre 15 y 40 minutos en hora pico.</p>
+      </details>
+      <details class="group py-7 md:py-8" data-reveal>
+        <summary class="cursor-pointer flex items-center justify-between gap-6 list-none">
+          <span class="font-display font-medium text-xl md:text-2xl text-[color:var(--ink)] leading-snug">¿Cortan a niños?</span>
+          <svg class="w-5 h-5 text-[color:var(--accent)] flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-4 text-[color:var(--ink-dim)] leading-relaxed max-w-3xl">Sí, desde los 4 años. Avisá al reservar para coordinar con un barbero que tenga paciencia para la primera vez. Tenemos elevador de silla y dulces para el final.</p>
+      </details>
+      <details class="group py-7 md:py-8" data-reveal>
+        <summary class="cursor-pointer flex items-center justify-between gap-6 list-none">
+          <span class="font-display font-medium text-xl md:text-2xl text-[color:var(--ink)] leading-snug">¿Cómo pago?</span>
+          <svg class="w-5 h-5 text-[color:var(--accent)] flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-4 text-[color:var(--ink-dim)] leading-relaxed max-w-3xl">Efectivo, transferencia bancaria o tarjeta. Datafast en el local. Si querés factura, traé tu RUC y la emitimos en el momento.</p>
+      </details>
+      <details class="group py-7 md:py-8" data-reveal>
+        <summary class="cursor-pointer flex items-center justify-between gap-6 list-none">
+          <span class="font-display font-medium text-xl md:text-2xl text-[color:var(--ink)] leading-snug">¿Hay parqueadero?</span>
+          <svg class="w-5 h-5 text-[color:var(--accent)] flex-shrink-0 transition-transform group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="mt-4 text-[color:var(--ink-dim)] leading-relaxed max-w-3xl">Hay parqueo en la calle frente al edificio La Recoleta — normalmente fácil entre semana, más complicado los sábados a la tarde. El edificio también tiene parqueadero subterráneo abierto al público con pago por hora.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ─────────── FINAL CTA ─────────── -->
+  <section id="reservar" class="py-36 md:py-52 max-w-5xl mx-auto px-6 md:px-8 text-center">
+    <div class="eyebrow mb-7" data-reveal>Tu próximo corte</div>
+    <h2 class="font-display font-light text-[clamp(40px,7vw,128px)] leading-[0.94] tracking-[-0.025em]" data-reveal>
+      Pasa cuando<br>quieras. <em class="italic text-[color:var(--accent)]">Mejor</em><br>si nos avisas.
+    </h2>
+    <p class="mt-10 text-[color:var(--ink-dim)] text-base md:text-lg max-w-xl mx-auto" data-reveal>
+      Mensaje breve por WhatsApp, te confirmamos en menos de una hora. Si llegas sin avisar, te decimos cuánto falta.
+    </p>
+    <a href="https://wa.me/593980610420?text=Hola%2C%20quiero%20agendar%20un%20corte%20en%20Los%20Barberos." class="btn-primary inline-flex items-center gap-3 mt-12 px-9 py-5 rounded-full text-base font-semibold" data-reveal>
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.8.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.5-.3z"/></svg>
+      Reservar por WhatsApp
+    </a>
+  </section>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="border-t border-[color:var(--line)]">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-14 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 rounded-full bg-[color:var(--accent)] grid place-items-center font-display font-bold text-[#1a1108] text-sm">LB</div>
+          <span class="font-display font-medium text-[color:var(--ink)]">Los Barberos</span>
+        </div>
+        <p class="text-[color:var(--ink-dim)] text-[13px] max-w-xs leading-relaxed">Edificio Recoleta, planta Baja, Calle, Catalina Aldaz, 170135 Quito, Ecuador</p>
+      </div>
+      <div class="flex flex-col gap-2 text-[13px] md:text-right text-[color:var(--ink-dim)]">
+        <a href="https://wa.me/593980610420?text=Hola%2C%20quiero%20agendar%20un%20corte%20en%20Los%20Barberos." class="ulink hover:text-[color:var(--ink)] transition">WhatsApp</a>
+        <a href="tel:+593 98 061 0420" class="ulink hover:text-[color:var(--ink)] transition">+593 98 061 0420</a>
+        <a href="https://maps.google.com/?cid=13444851401724651124&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener" class="ulink hover:text-[color:var(--ink)] transition">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="border-t border-[color:var(--line)]">
+      <div class="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between text-[11px] uppercase tracking-widest text-[color:var(--ink-faint)]">
+        <span>© 2026 Los Barberos · Quito</span>
+        <span>Hecho en <a href="https://blip.company" class="text-[color:var(--accent)] hover:text-[color:var(--accent-bright)] transition">Blip</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp pill (mobile only) -->
+  <a href="https://wa.me/593980610420?text=Hola%2C%20quiero%20agendar%20un%20corte%20en%20Los%20Barberos." class="fixed bottom-5 right-5 z-30 md:hidden btn-primary w-14 h-14 rounded-full grid place-items-center shadow-2xl shadow-black/60">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.7 4.2 3.8.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.5-.3z"/></svg>
+  </a>
+
+  <script>
+    // Reveal-on-scroll
+    (function() {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      const attach = () => {
+        if (!document.body) { setTimeout(attach, 50); return; }
+        document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+      };
+      attach();
+    })();
+
+    // Mobile nav
+    (function() {
+      const toggle = document.querySelector('[data-mobile-nav-toggle]');
+      const panel = document.getElementById('mobile-nav-panel');
+      const close = document.querySelector('[data-mobile-nav-close]');
+      if (!toggle || !panel) return;
+      const open = () => {
+        panel.classList.remove('hidden');
+        panel.setAttribute('aria-hidden', 'false');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+      };
+      const shut = () => {
+        panel.classList.add('hidden');
+        panel.setAttribute('aria-hidden', 'true');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      };
+      toggle.addEventListener('click', open);
+      close && close.addEventListener('click', shut);
+      panel.addEventListener('click', (e) => {
+        if (e.target === panel) shut();
+      });
+      document.querySelectorAll('[data-mobile-nav-link]').forEach(a => a.addEventListener('click', shut));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !panel.classList.contains('hidden')) shut();
+      });
+    })();
+  </script>
+</body>
+</html>
